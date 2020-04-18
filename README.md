@@ -1,3 +1,4 @@
+# WIP
 # Next.js Starter Project
 
 This is a starter project for React that uses Next.js.
@@ -25,7 +26,7 @@ This project exists to make it easier to get started a creating production app i
 
 To get started, just clone the repository and run `npm install && npm run dev`:
 
-    git clone https://github.com/iaincollins/nextjs-starter.git
+    git clone https://github.com/negati-ve/nextjs-starter-mobx.git
     npm install
     npm run dev
 
@@ -45,9 +46,9 @@ Note: If you are already running a webserver on port 80 (e.g. Macs usually have 
 
 ## Configuring
 
-If you configure a .env file (just copy [.env.example](https://github.com/iaincollins/nextjs-starter/blob/master/.env.example) over to '.env' and fill in the options) you can configure a range of options.
+If you configure a .env file (just copy [.env.example](https://github.com/negati-ve/nextjs-starter-mobx/blob/master/.env.example) over to '.env' and fill in the options) you can configure a range of options.
 
-See the [AUTHENTICATION.md](https://github.com/iaincollins/nextjs-starter/blob/master/AUTHENTICATION.md) for how to set up oAuth if you want to do that. It suggested you start with Twitter as it's the easiest to get working.
+See the [AUTHENTICATION.md](https://github.com/negati-ve/nextjs-starter-mobx/blob/master/AUTHENTICATION.md) for how to set up oAuth if you want to do that. It suggested you start with Twitter as it's the easiest to get working.
 
 ## Deploying to the cloud with now.sh
 

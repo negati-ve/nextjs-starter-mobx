@@ -3,8 +3,17 @@ import React from 'react'
 import { Container, Row, Col, Button, Jumbotron, ListGroup, ListGroupItem } from 'reactstrap'
 import Page from '../components/page'
 import Layout from '../components/layout'
+import {observer, inject} from 'mobx-react'
+@inject('store')
+@observer
+export default class extends React.Component {
 
-export default class extends Page {
+  static async getInitialProps({ mobxStore, query }) {
+    let userData = await mobxStore.UserStore.getUserDetails();
+    mobxStore.UserStore.setUserName(userData.first_name)
+    return { };
+  }
+
   render() {
     return (
       <Layout {...this.props} navmenu={false} container={false}>
@@ -26,7 +35,7 @@ export default class extends Page {
               A reference and template for React projects
             </p>
             <p className="text-right">
-              <a href="https://github.com/iaincollins/nextjs-starter" className="btn btn-outline-light btn-lg"><span className="icon ion-logo-github mr-2"/> Download from GitHub</a>
+              <a href="https://github.com/negati-ve/nextjs-starter-mobx" className="btn btn-outline-light btn-lg"><span className="icon ion-logo-github mr-2"/> Download from GitHub</a>
             </p>
             <style jsx>{`
               .display-2  {
@@ -83,7 +92,7 @@ export default class extends Page {
               </ListGroup>
             </Col>
           </Row>
-          <h2 className="text-center display-4 mt-2 mb-5">Getting Started</h2>
+            <h2 className="text-center display-4 mt-2 mb-5">Let's get started, {this.props.store.UserStore.name} (name generated ssr via mobx)</h2>
           <p>
             <a href="https://github.com/zeit/next.js">Next.js</a> from <a href="https://zeit.co">Zeit</a> makes creating
             websites with React easy. 
@@ -95,7 +104,7 @@ export default class extends Page {
             It also serves as template for creating new projects.
           </p>
           <pre>
-{`git clone https://github.com/iaincollins/nextjs-starter.git
+{`git clone https://github.com/negati-ve/nextjs-starter-mobx.git
 npm install
 npm run dev`}
           </pre>
@@ -107,10 +116,10 @@ npm run dev`}
 now`}
             </pre>
           <p>
-            For more information on how to build and deploy see <a href="https://github.com/iaincollins/nextjs-starter/blob/master/README.md">README.md</a>
+            For more information on how to build and deploy see <a href="https://github.com/negati-ve/nextjs-starter-mobx/blob/master/README.md">README.md</a>
           </p>
           <p>
-            For tips on configuring authentication see <a href="https://github.com/iaincollins/nextjs-starter/blob/master/AUTHENTICATION.md">AUTHENTICATION.md</a>
+            For tips on configuring authentication see <a href="https://github.com/negati-ve/nextjs-starter-mobx/blob/master/AUTHENTICATION.md">AUTHENTICATION.md</a>
           </p>
           <p>
             The next.js repository has a <a href="https://github.com/zeit/next.js/tree/master/examples">great selection of examples</a> which are an excellent reference.

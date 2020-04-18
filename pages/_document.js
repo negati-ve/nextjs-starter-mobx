@@ -7,7 +7,8 @@ export default class extends Document {
     * one is set on the page.
     **/
     return (
-      <html lang={this.props.__NEXT_DATA__.props.pageProps.lang || 'en'}>
+      // <html lang={this.props.__NEXT_DATA__.props.pageProps.lang || 'en'}>
+      <html lang='en'>
         <Head>
         </Head>
         <body>

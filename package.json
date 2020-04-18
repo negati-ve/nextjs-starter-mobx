@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-starter",
+  "name": "Instadukan",
   "version": "7.0.2",
   "description": "A starter Next.js project with email and oAuth authentication",
   "author": "Iain Collins <me@iaincollins.com>",
@@ -7,6 +7,10 @@
   "repository": "https://github.com/iaincollins/nextjs-starter.git",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "axios": "^0.19.2",
     "babel-core": "^6.26.3",
     "babel-plugin-wrap-in-js": "^1.1.1",
     "bootstrap": "^4.1.3",
@@ -16,29 +20,38 @@
     "ionicons": "^4.5.1",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.2.1",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.1.8",
     "mongodb": "^3.1.10",
     "nedb": "^1.8.0",
-    "next": "^7.0.2",
+    "next": "^9.3",
     "next-auth": "^1.12.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "nodemailer": "^4.7.0",
     "nodemailer-direct-transport": "^3.3.2",
     "nodemailer-smtp-transport": "^2.7.4",
+    "nuka-carousel": "^4.6.6",
     "passport-facebook": "^2.1.1",
     "passport-google-oauth": "^1.0.0",
     "passport-twitter": "^1.0.4",
     "popper.js": "^1.14.6",
     "raw-loader": "^0.5.1",
-    "react": "^16.7.0",
+    "react": "^16.8.0",
     "react-bootstrap-table": "^4.3.1",
-    "react-dom": "^16.7.0",
+    "react-dom": "^16.8.0",
+    "react-google-places-autocomplete": "^2.0.3",
+    "react-id-swiper": "^3.0.0",
+    "react-stars": "^2.2.5",
     "react-syntax-highlighter": "^10.1.2",
     "react-transition-group": "^2.5.1",
     "reactstrap": "^6.5.0",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^8.0.2",
     "universal-cookie": "^3.0.7"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "babel-plugin-styled-components": "^1.10.7",
     "cross-env": "^5.1.6"
   },
   "optionalDependencies": {
@@ -51,6 +64,6 @@
     "postinstall": "next build"
   },
   "engines": {
-    "node": "8.11.x"
+    "node": "12.16.x"
   }
 }
